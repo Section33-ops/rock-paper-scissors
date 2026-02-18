@@ -17,9 +17,32 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  let humanChoice = prompt("Rock, Paper, Scissors, SHOOT!");
+  let humanChoice = prompt("Rock, Paper, Scissors, SHOOT!").toLowerCase();
   return humanChoice;
 }
 
-console.log(getComputerChoice());
-console.log(getHumanChoice());
+function playRound(humanChoice, computerChoice) {
+  if (computerChoice == "rock" && humanChoice == "scissors") {
+    console.log("Computer wins! Chose rock");
+    computerScore += 1;
+  } else if (computerChoice == "scissors" && humanChoice == "paper") {
+    console.log("Computer wins! Chose scissors");
+    computerScore += 1;
+  } else if (computerChoice == "paper" && humanChoice == "rock") {
+    console.log("Computer wins! Chose paper");
+    computerScore += 1;
+  } else if (computerChoice == humanChoice) {
+    console.log("It's a tie");
+  } else {
+    console.log("You win!");
+    humanScore += 1;
+  }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+
+// console.log(getComputerChoice());
+// console.log(getHumanChoice());
