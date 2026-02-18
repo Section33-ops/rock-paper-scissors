@@ -13,4 +13,10 @@ function getComputerChoice() {
   return randomChoice;
 }
 
+function getHumanChoice() {
+  let humanChoice = prompt("Rock, Paper, Scissors, SHOOT!");
+  return humanChoice;
+}
+
 console.log(getComputerChoice());
+console.log(getHumanChoice());
