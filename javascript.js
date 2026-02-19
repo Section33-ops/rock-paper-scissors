@@ -40,10 +40,14 @@ function playGame() {
     }
   }
 
-  const humanSelection = getHumanChoice();
-  const computerSelection = getComputerChoice();
+  // const humanSelection = getHumanChoice();
+  // const computerSelection = getComputerChoice();
 
-  playRound(humanSelection, computerSelection);
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
 }
 
 // console.log(getComputerChoice());
